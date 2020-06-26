@@ -1,0 +1,176 @@
+/* CSS Reset */
+
+body,
+ul,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+  height: auto;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+/* Typography */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "Jua", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.l-wrapper,
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.header {
+  padding: 1rem 0;
+  background-color: blue;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.header__inside {
+  position: relative;
+}
+
+.header__logo {
+  max-width: 200px;
+  font-size: 80px;
+  float: left;
+  overflow: hidden;
+}
+
+.header__menu {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  background-image: url("/images/ha.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.overlay__content {
+  position: relative;
+  top: 25%;
+  width: 92%;
+  margin: 30px auto 0 auto;
+  overflow: hidden;
+}
+
+.overlay__content a {
+  font-family: "Rochester", cursive;
+  padding: 8px;
+  font-size: 50px;
+  color: white;
+  display: block;
+  float: right;
+  clear: both;
+  transition: 0.3s;
+}
+
+.overlay__content a:hover,
+.overlay a:focus {
+  color: tan;
+}
+
+.overlay__closeBtn {
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  font-size: 100px;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+}
+
+.overlay__closeBtn:hover {
+  color: tan;
+}
+
+/* menuicon */
+
+input[id="menuicon"] {
+  display: none;
+}
+
+input[id="menuicon"] + label {
+  display: block;
+  width: 40px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[id="menuicon"] + label span {
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius: 30px;
+  position: absolute;
+  background-color: white;
+  transition: all 0.35s;
+}
+
+input[id="menuicon"] + label span:nth-child(1) {
+  top: 0;
+}
+input[id="menuicon"] + label span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+input[id="menuicon"] + label span:nth-child(3) {
+  bottom: 0;
+}

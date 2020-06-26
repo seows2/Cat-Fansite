@@ -1,0 +1,33 @@
+{
+  "name": "cat-fansite",
+  "version": "1.0.0",
+  "description": "우리집 고양이 팬사이트를 만듭니다 순수 JS와 HTML, CSS를 이용합니다.",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/polyfill": "^7.10.1",
+    "autoprefixer": "^9.8.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "postcss-loader": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seows2/Cat-Fansite.git"
+  },
+  "keywords": [
+    "Cat"
+  ],
+  "author": "SeoWS2",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seows2/Cat-Fansite/issues"
+  },
+  "homepage": "https://github.com/seows2/Cat-Fansite#readme"
+}

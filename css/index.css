@@ -1,0 +1,6 @@
+body {
+  background-image: url("../images//cover2.JPG");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
