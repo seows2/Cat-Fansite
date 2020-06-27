@@ -13,10 +13,10 @@ const overlayCoverImages = [
 
 const overlayElement = document.getElementById("overlay-js");
 
-let activateOverlay = () => {
-  let menu = document.getElementById("header__menu-js");
+const activateOverlay = () => {
+  const menu = document.getElementById("header__menu-js");
   menu.addEventListener("click", () => (overlayElement.style.height = "100%"));
-  let closeBtn = document.getElementById("overlay__closeBtn-js");
+  const closeBtn = document.getElementById("overlay__closeBtn-js");
   closeBtn.addEventListener("click", () => (overlayElement.style.height = "0"));
 };
 

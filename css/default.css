@@ -96,7 +96,7 @@ h6 {
   background-color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
-  background-image: url("/images/ha.jpg");
+  background-image: url("../images/ha.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -105,8 +105,7 @@ h6 {
 .overlay__content {
   position: relative;
   top: 25%;
-  width: 92%;
-  margin: 30px auto 0 auto;
+  width: 50%;
   overflow: hidden;
 }
 
@@ -119,6 +118,9 @@ h6 {
   float: right;
   clear: both;
   transition: 0.3s;
+}
+.overlay__content a:nth-child(1) {
+  margin-bottom: 15px;
 }
 
 .overlay__content a:hover,
