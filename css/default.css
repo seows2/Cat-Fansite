@@ -74,7 +74,7 @@ h6 {
 
 .header__logo {
   max-width: 200px;
-  font-size: 80px;
+  font-size: 40px;
   float: left;
   overflow: hidden;
 }
@@ -129,10 +129,10 @@ h6 {
 }
 
 .overlay__closeBtn {
-  position: absolute;
-  top: 20px;
-  left: 60px;
-  font-size: 100px;
+  position: relative;
+  float: right;
+  margin-right: 30px;
+  font-size: 80px;
   font-weight: bold;
   color: white;
   transition: 0.3s;

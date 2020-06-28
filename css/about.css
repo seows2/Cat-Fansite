@@ -1,5 +1,4 @@
-body {
-  background: none;
+.about {
   background-color: lightpink;
   transition: background-color 0.5s;
 }
@@ -69,7 +68,7 @@ section:last-child {
 }
 
 .member__detail h2 span {
-  font-size: 0.7rem;
+  font-size: 1.6rem;
 }
 
 .member__detail h3 {
