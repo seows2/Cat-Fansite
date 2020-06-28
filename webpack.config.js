@@ -1,6 +1,5 @@
 const path = require("path");
-const autoprefixer = require("autoprefixer");
-const ExtractCSS = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const MODE = process.env.WEBPACK_ENV;
 const ENTRY_FILE = path.resolve(__dirname, "js", "main.js");
@@ -20,8 +19,20 @@ const config = {
         ],
       },
       {
+        test: /\.(jpg|jpeg)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              outputPath: `/assets`,
+            },
+          },
+        ],
+      },
+      {
         test: /\.(css)$/,
-        use: ExtractCSS.extract([
+        use: [
+          MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
             options: {
@@ -30,13 +41,8 @@ const config = {
           },
           {
             loader: "postcss-loader",
-            options: {
-              plugins() {
-                return [autoprefixer({ overrideBrowserslist: "cover 99.5%" })];
-              },
-            },
           },
-        ]),
+        ],
       },
     ],
   },
@@ -44,7 +50,7 @@ const config = {
     path: OUTPUT_DIR,
     filename: "[name].js",
   },
-  plugins: [new ExtractCSS("main.css")],
+  plugins: [new MiniCssExtractPlugin({ filename: "main.css" })],
 };
 
 module.exports = config;

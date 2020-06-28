@@ -176,3 +176,54 @@ input[id="menuicon"] + label span:nth-child(2) {
 input[id="menuicon"] + label span:nth-child(3) {
   bottom: 0;
 }
+
+blockquote {
+  font-weight: 100;
+  font-size: 1.5rem;
+  font-style: italic;
+  max-width: 600px;
+  line-height: 1.4;
+  position: relative;
+  margin: 2.2rem auto 0;
+  padding: 0.5rem;
+}
+
+blockquote:before,
+blockquote:after {
+  position: absolute;
+  color: #f1efe6;
+  font-size: 8rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+blockquote:before {
+  content: "“";
+  left: -5rem;
+  top: -2rem;
+}
+
+blockquote:after {
+  content: "”";
+  right: -2rem;
+  bottom: 1rem;
+}
+
+.l-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.l-row {
+  margin: 0 -1rem;
+}
+
+.l-col {
+  float: left;
+  padding: 0 1rem;
+}
+
+.l-col-1-5 {
+  width: 40%;
+}

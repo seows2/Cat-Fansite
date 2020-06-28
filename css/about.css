@@ -1,0 +1,129 @@
+body {
+  background: none;
+  background-color: lightpink;
+  transition: background-color 0.5s;
+}
+section {
+  margin-bottom: 10rem;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+.group__wrapper {
+  position: relative;
+  height: 90vh;
+}
+
+.group__inside {
+  width: 80vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.group__img {
+  max-width: 500px;
+  display: block;
+  margin: 0 auto 4rem;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.member {
+  position: relative;
+  height: 100vh;
+}
+
+.member__inside {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+}
+
+.member__profile {
+  margin: 0 auto 2rem;
+  width: 80%;
+}
+
+.member__img {
+  width: 350px;
+  float: left;
+  border: 10px solid white;
+}
+
+.member__detail {
+  overflow: hidden;
+  text-align: left;
+  padding: 2rem;
+}
+
+.member__detail h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.member__detail h2 span {
+  font-size: 0.7rem;
+}
+
+.member__detail h3 {
+  font-size: 2rem;
+  color: crimson;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.member__detail__spec {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.member__detail__spec span {
+  color: purple;
+}
+
+.member__detail__saying {
+  font-size: 2rem;
+}
+
+.photo-wrapper {
+  overflow: hidden;
+}
+
+.photo {
+  max-width: 100px;
+  filter: grayscale(100%);
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.photo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.8s;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
