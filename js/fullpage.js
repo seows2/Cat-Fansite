@@ -1,5 +1,5 @@
 /*!
- * fullPage 3.0.7
+ * fullPage 3.0.8
  * https://github.com/alvarotrigo/fullPage.js
  *
  * @license GPLv3 for open source use only
@@ -619,7 +619,7 @@
 
     if (container) {
       //public functions
-      FP.version = "3.0.5";
+      FP.version = "3.0.8";
       FP.setAutoScrolling = setAutoScrolling;
       FP.setRecordHistory = setRecordHistory;
       FP.setScrollingSpeed = setScrollingSpeed;
@@ -792,15 +792,21 @@
     }
 
     function onMouseEnterOrLeave(e) {
-      //onMouseLeave will use the destination target, not the one we are moving away from
-      var target = event.toElement || e.relatedTarget || e.target;
-
       var type = e.type;
       var isInsideOneNormalScroll = false;
+      var isUsingScrollOverflow = options.scrollOverflow;
+
+      //onMouseLeave will use the destination target, not the one we are moving away from
+      var target =
+        type === "mouseleave" ? e.toElement || e.relatedTarget : e.target;
 
       //coming from closing a normalScrollElements modal or moving outside viewport?
       if (target == document || !target) {
         setMouseHijack(true);
+
+        if (isUsingScrollOverflow) {
+          options.scrollOverflowHandler.setIscroll(target, true);
+        }
         return;
       }
 
@@ -829,6 +835,10 @@
           if (isNormalScrollTarget || isNormalScrollChildFocused) {
             if (!FP.shared.isNormalScrollElement) {
               setMouseHijack(false);
+
+              if (isUsingScrollOverflow) {
+                options.scrollOverflowHandler.setIscroll(target, false);
+              }
             }
             FP.shared.isNormalScrollElement = true;
             isInsideOneNormalScroll = true;
@@ -839,6 +849,11 @@
       //not inside a single normal scroll element anymore?
       if (!isInsideOneNormalScroll && FP.shared.isNormalScrollElement) {
         setMouseHijack(true);
+
+        if (isUsingScrollOverflow) {
+          options.scrollOverflowHandler.setIscroll(target, true);
+        }
+
         FP.shared.isNormalScrollElement = false;
       }
     }
@@ -876,9 +891,10 @@
     function setOptionsFromDOM() {
       //no anchors option? Checking for them in the DOM attributes
       if (!options.anchors.length) {
-        var attrName = "[data-anchor]";
+        var anchorsAttribute = "[data-anchor]";
         var anchors = $(
-          options.sectionSelector.split(",").join(attrName + ",") + attrName,
+          options.sectionSelector.split(",").join(anchorsAttribute + ",") +
+            anchorsAttribute,
           container
         );
         if (anchors.length) {
@@ -891,9 +907,10 @@
 
       //no tooltips option? Checking for them in the DOM attributes
       if (!options.navigationTooltips.length) {
-        var attrName = "[data-tooltip]";
+        var tooltipsAttribute = "[data-tooltip]";
         var tooltips = $(
-          options.sectionSelector.split(",").join(attrName + ",") + attrName,
+          options.sectionSelector.split(",").join(tooltipsAttribute + ",") +
+            tooltipsAttribute,
           container
         );
         if (tooltips.length) {
@@ -1765,11 +1782,11 @@
       }
 
       /*
-            Keeping record of the last scrolled position to determine the scrolling direction.
-            No conventional methods can be used as the scroll bar might not be present
-            AND the section might not be active if it is auto-height and didnt reach the middle
-            of the viewport.
-            */
+          Keeping record of the last scrolled position to determine the scrolling direction.
+          No conventional methods can be used as the scroll bar might not be present
+          AND the section might not be active if it is auto-height and didnt reach the middle
+          of the viewport.
+          */
       previousDestTop = position;
       return position;
     }
@@ -2043,10 +2060,10 @@
           function () {
             if (options.scrollBar) {
               /* Hack!
-                        The timeout prevents setting the most dominant section in the viewport as "active" when the user
-                        scrolled to a smaller section by using the mousewheel (auto scrolling) rather than draging the scroll bar.
-                        When using scrollBar:true It seems like the scroll events still getting propagated even after the scrolling animation has finished.
-                        */
+                      The timeout prevents setting the most dominant section in the viewport as "active" when the user
+                      scrolled to a smaller section by using the mousewheel (auto scrolling) rather than draging the scroll bar.
+                      When using scrollBar:true It seems like the scroll events still getting propagated even after the scrolling animation has finished.
+                      */
               setTimeout(function () {
                 afterSectionLoads(v);
               }, 30);
@@ -2367,8 +2384,8 @@
 
         if (sectionAnchor && sectionAnchor.length) {
           /*in order to call scrollpage() only once for each destination at a time
-                    It is called twice for each scroll otherwise, as in case of using anchorlinks `hashChange`
-                    event is fired on every scroll too.*/
+                  It is called twice for each scroll otherwise, as in case of using anchorlinks `hashChange`
+                  event is fired on every scroll too.*/
           if (
             (sectionAnchor &&
               sectionAnchor !== lastScrolledDestiny &&
@@ -2614,6 +2631,7 @@
         (options.lockAnchors || !options.anchors.length)
       ) {
         preventDefault(e);
+        /*jshint validthis:true */
         moveTo(this.getAttribute("data-menuanchor"));
       }
     }
@@ -4218,13 +4236,13 @@
   }
 
   /**
-    Usage:
-    var wrapper = document.createElement('div');
-    wrapper.className = 'fp-slides';
-    wrap($('.slide'), wrapper);
-    https://jsfiddle.net/qwzc7oy3/15/ (vanilla)
-    https://jsfiddle.net/oya6ndka/1/ (jquery equivalent)
-    */
+  Usage:
+  var wrapper = document.createElement('div');
+  wrapper.className = 'fp-slides';
+  wrap($('.slide'), wrapper);
+  https://jsfiddle.net/qwzc7oy3/15/ (vanilla)
+  https://jsfiddle.net/oya6ndka/1/ (jquery equivalent)
+  */
   function wrap(toWrap, wrapper, isWrapAll) {
     var newParent;
     wrapper = wrapper || document.createElement("div");
@@ -4240,13 +4258,13 @@
   }
 
   /**
-    Usage:
-    var wrapper = document.createElement('div');
-    wrapper.className = 'fp-slides';
-    wrap($('.slide'), wrapper);
-    https://jsfiddle.net/qwzc7oy3/27/ (vanilla)
-    https://jsfiddle.net/oya6ndka/4/ (jquery equivalent)
-    */
+  Usage:
+  var wrapper = document.createElement('div');
+  wrapper.className = 'fp-slides';
+  wrap($('.slide'), wrapper);
+  https://jsfiddle.net/qwzc7oy3/27/ (vanilla)
+  https://jsfiddle.net/oya6ndka/4/ (jquery equivalent)
+  */
   function wrapAll(toWrap, wrapper) {
     wrap(toWrap, wrapper, true);
   }
@@ -4573,7 +4591,7 @@ if (window.jQuery && window.fullpage) {
 
     $.fn.fullpage = function (options) {
       options = $.extend({}, options, { $: $ });
-      new fullpage(this[0], options);
+      var instance = new fullpage(this[0], options);
     };
   })(window.jQuery, window.fullpage);
 }
