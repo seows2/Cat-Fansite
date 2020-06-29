@@ -15,9 +15,15 @@ const overlayElement = document.getElementById("overlay-js");
 
 const activateOverlay = () => {
   const menu = document.getElementById("header__menu-js");
-  menu.addEventListener("click", () => (overlayElement.style.height = "100%"));
+  menu.addEventListener("click", () => {
+    overlayElement.style.height = "100%";
+    document.getElementById("header-js").style.display = "none";
+  });
   const closeBtn = document.getElementById("overlay__closeBtn-js");
-  closeBtn.addEventListener("click", () => (overlayElement.style.height = "0"));
+  closeBtn.addEventListener("click", () => {
+    overlayElement.style.height = "0";
+    document.getElementById("header-js").style.display = "block";
+  });
 };
 
 activateOverlay();

@@ -61,7 +61,7 @@ h6 {
 }
 
 .header {
-  padding: 1rem 0;
+  padding: 1rem 5rem;
   position: fixed;
   width: 100%;
   top: 0;
@@ -131,7 +131,7 @@ h6 {
 .overlay__closeBtn {
   position: relative;
   float: right;
-  margin-right: 30px;
+  margin-right: 48px;
   font-size: 80px;
   font-weight: bold;
   color: white;
