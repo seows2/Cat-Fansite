@@ -62,10 +62,10 @@ h6 {
 
 .header {
   padding: 1rem 0;
-  background-color: blue;
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 2;
 }
 
 .header__inside {

@@ -33,6 +33,7 @@ section:last-child {
 
 .member {
   position: relative;
+  border: 10px solid red;
   height: 100vh;
 }
 
@@ -106,7 +107,7 @@ section:last-child {
   filter: grayscale(0%);
   transform: scale(1.1);
 }
-.fade-in {
+.fadeIn {
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;

@@ -1,56 +1,34 @@
-const main = document.querySelector("main");
-const header = document.querySelector("header");
-
-const fadeInForScroll = () => {
-  let elements;
-  let windowHeight;
-  const init = () => {
-    elements = document.querySelectorAll(".hidden");
-    windowHeight = window.innerHeight;
-    addEventHandlers();
-    checkPosition();
-  };
-  const addEventHandlers = () => {
-    window.addEventListener("scroll", checkPosition);
-    window.addEventListener("resize", init);
-  };
-  const showElement = (target) =>
-    (target.className = target.className.replace("hidden", "fade-in"));
-  const hideElement = (target) =>
-    (target.className = target.className.replace("fade-in", "hidden"));
-
-  const checkPosition = () => {
-    for (let i = 0; i < elements.length; i++) {
-      const positionInfo = elements[i].getBoundingClientRect();
-      const positionFromTop = positionInfo.top;
-      const elementHeight = positionInfo.height;
-
-      if (positionFromTop - windowHeight <= 0) {
-        showElement(elements[i]);
-      } else if (
-        positionFromTop - windowHeight > 1 ||
-        positionFromTop + elementHeight < 0
-      ) {
-        hideElement(elements[i]);
+const initializeScrollEffect = function () {
+  const intersectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.className = entry.target.className.replace(
+          "hidden",
+          "fadeIn"
+        );
+      } else {
+        entry.target.className = entry.target.className.replace(
+          "fadeIn",
+          "hidden"
+        );
       }
-    }
-  };
-  return { init };
+    });
+  });
+  const fadeInElemes = document.querySelectorAll(".hidden");
+  fadeInElemes.forEach((fadeInElem) =>
+    intersectionObserver.observe(fadeInElem)
+  );
 };
 
-const initializeMenu = () => {
-  main.style.paddingTop = header.offsetHeight + "px";
+const initializeFullpageEffect = function () {
+  new fullpage("#fullpage", {
+    autoScrolling: true,
+    scrollHorizontally: true,
+  });
+  fullpage_api.setAllowScrolling(true);
 };
 
 window.onload = () => {
-  if (main && header) {
-    fadeInForScroll().init();
-    initializeMenu();
-  }
-};
-
-window.onresize = () => {
-  if (main && header) {
-    initializeMenu();
-  }
+  initializeScrollEffect();
+  initializeFullpageEffect();
 };

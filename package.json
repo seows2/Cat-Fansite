@@ -4,7 +4,8 @@
   "description": "우리집 고양이 팬사이트를 만듭니다 순수 JS와 HTML, CSS를 이용합니다.",
   "main": "index.html",
   "dependencies": {
-    "@babel/preset-env": "^7.10.3"
+    "@babel/preset-env": "^7.10.3",
+    "fullpage.js": "^3.0.8"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.3",
