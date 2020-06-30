@@ -1,7 +1,7 @@
 const initializeScrollEffect = function () {
   const intersectionObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.intersectionRatio > 0) {
+      if (entry.isIntersecting) {
         entry.target.className = entry.target.className.replace(
           "hidden",
           "fadeIn"
@@ -23,7 +23,7 @@ const initializeScrollEffect = function () {
 const initializeFullpageEffect = function () {
   new fullpage("#fullpage", {
     autoScrolling: true,
-    scrollHorizontally: true,
+    responsiveWidth: 768,
   });
   fullpage_api.setAllowScrolling(true);
 };

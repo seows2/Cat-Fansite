@@ -1,5 +1,4 @@
 .about {
-  background-color: lightpink;
   transition: background-color 0.5s;
 }
 section {
@@ -16,7 +15,7 @@ section:last-child {
 }
 
 .group__inside {
-  width: 80vw;
+  width: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -24,7 +23,7 @@ section:last-child {
 }
 
 .group__img {
-  max-width: 500px;
+  width: 60vw;
   display: block;
   margin: 0 auto 4rem;
   border-radius: 1rem;
@@ -33,16 +32,15 @@ section:last-child {
 
 .member {
   position: relative;
-  border: 10px solid red;
   height: 100vh;
 }
 
 .member__inside {
+  width: 100%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 100%;
 }
 
 .member__profile {
@@ -51,7 +49,10 @@ section:last-child {
 }
 
 .member__img {
-  width: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 50%;
   float: left;
   border: 10px solid white;
 }
@@ -74,7 +75,6 @@ section:last-child {
 
 .member__detail h3 {
   font-size: 2rem;
-  color: crimson;
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -84,12 +84,27 @@ section:last-child {
   margin-bottom: 2rem;
 }
 
-.member__detail__spec span {
-  color: purple;
-}
-
 .member__detail__saying {
   font-size: 2rem;
+}
+
+.font-main-dark {
+  color: black;
+}
+.font-main-light {
+  color: white;
+}
+.font-sub-dark {
+  color: crimson;
+}
+.font-sub-light {
+  color: skyblue;
+}
+.font-contents-dark {
+  color: purple;
+}
+.font-contents-light {
+  color: orange;
 }
 
 .photo-wrapper {
@@ -125,5 +140,36 @@ section:last-child {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .l-col-t-6-12 {
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+  .group {
+    height: auto;
+  }
+  .group__inside {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+  }
+  .member {
+    height: auto;
+  }
+  .member__inside {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+  }
+  .member__img {
+    float: none;
+    padding-top: 80%;
+    width: 60%;
+  }
+  .member__detail {
+    padding-left: 0;
   }
 }
