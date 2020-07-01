@@ -162,7 +162,7 @@ input[id="menuicon"] + label span {
   height: 5px;
   border-radius: 30px;
   position: absolute;
-  background-color: white;
+  background-color: black;
   transition: all 0.35s;
 }
 

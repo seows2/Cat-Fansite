@@ -166,7 +166,7 @@ section:last-child {
   .member__img {
     float: none;
     padding-top: 80%;
-    width: 60%;
+    width: 100%;
   }
   .member__detail {
     padding-left: 0;
