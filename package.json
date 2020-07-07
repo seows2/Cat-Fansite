@@ -5,7 +5,9 @@
   "main": "index.html",
   "dependencies": {
     "@babel/preset-env": "^7.10.3",
+    "@fancyapps/fancybox": "^3.5.7",
     "fullpage.js": "^3.0.8",
+    "jquery": "^3.5.1",
     "lightgallery.js": "^1.2.0"
   },
   "devDependencies": {
