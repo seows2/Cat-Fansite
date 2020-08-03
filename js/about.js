@@ -21,7 +21,7 @@ const initializeScrollEffect = function () {
 };
 
 const initializeFullpageEffect = function () {
-  new fullpage("#fullpage", {
+  new fullpage("#fullpage-js", {
     autoScrolling: true,
     responsiveWidth: 768,
   });

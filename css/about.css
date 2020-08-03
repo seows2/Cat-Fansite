@@ -6,12 +6,12 @@ section {
 }
 
 section:last-child {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .group {
   position: relative;
-  height: 90vh;
+  height: 100vh;
 }
 
 .group__inside {
@@ -19,11 +19,11 @@ section:last-child {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .group__img {
-  width: 45vw;
+  width: 40vw;
   display: block;
   margin: 0 auto 4rem;
   border-radius: 1rem;
@@ -40,7 +40,7 @@ section:last-child {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .member__profile {
@@ -52,9 +52,26 @@ section:last-child {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 50%;
+  width: 60%;
+  padding-top: 60%;
   float: left;
   border: 10px solid white;
+}
+
+.zizon-img {
+  background-image: url("../images/zizon.jpeg");
+}
+.ha-img {
+  background-image: url("../images/ha.jpg");
+}
+.mak-img {
+  background-image: url("../images/mak.jpeg");
+}
+.suo-img {
+  background-image: url("../images/suo.jpeg");
+}
+.tung-img {
+  background-image: url("../images/tung.jpeg");
 }
 
 .member__detail {

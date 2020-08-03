@@ -53,7 +53,7 @@ h6 {
   line-height: 1;
 }
 
-.l-wrapper,
+.l-row:after,
 .clearfix:after {
   content: " ";
   display: block;
@@ -65,7 +65,13 @@ h6 {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 2;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+header h1 {
+  text-indent: -9999px;
 }
 
 .header__inside {
@@ -87,6 +93,7 @@ h6 {
 }
 
 .overlay {
+  position: fixed;
   background: rgba(51, 55, 69, 0.8);
   top: 0;
   left: 0;
@@ -101,7 +108,7 @@ h6 {
 .overlay.open {
   opacity: 1;
   visibility: visible;
-  z-index: 9999;
+  z-index: 10000;
   height: 100%;
 }
 
@@ -130,7 +137,6 @@ h6 {
 }
 
 .overlay ul li a {
-  font-family: "Rochester", cursive;
   display: inline-block;
   position: relative;
   color: #fff;
@@ -141,6 +147,7 @@ h6 {
   content: " ";
   position: absolute;
   bottom: 0;
+  left: 45%;
   width: 0%;
   transform: translateX(-50%);
   height: 3px;
@@ -184,7 +191,8 @@ h6 {
 
 .overlay__closeBtn {
   position: absolute;
-  top: 0;
+  z-index: 10001;
+  top: -2rem;
   right: 0;
   margin-right: 10rem;
   font-size: 10rem;
@@ -214,7 +222,6 @@ input[id="menuicon"] + label span {
   height: 5px;
   border-radius: 30px;
   position: absolute;
-  background-color: black;
   transition: all 0.35s;
 }
 
@@ -227,6 +234,13 @@ input[id="menuicon"] + label span:nth-child(2) {
 }
 input[id="menuicon"] + label span:nth-child(3) {
   bottom: 0;
+}
+
+.menu-light {
+  background-color: white;
+}
+.menu-dark {
+  background-color: black;
 }
 
 blockquote {

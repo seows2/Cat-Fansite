@@ -8,7 +8,8 @@
     "@fancyapps/fancybox": "^3.5.7",
     "fullpage.js": "^3.0.8",
     "jquery": "^3.5.1",
-    "lightgallery.js": "^1.2.0"
+    "lightgallery.js": "^1.2.0",
+    "masonry-layout": "^4.2.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.3",

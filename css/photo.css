@@ -1,0 +1,13 @@
+.main__photo {
+  margin-top: 10vh;
+}
+
+.title {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.title h2 {
+  font-size: 7rem;
+  font-family: "Rochester", cursive;
+}

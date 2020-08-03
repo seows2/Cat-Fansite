@@ -15,7 +15,7 @@
     <link href="../css/jquery.fancybox.min.css" rel="stylesheet" />
     <title>고양이 팬사이트</title>
   </head>
-  <body class="index">
+  <body class="photo_html">
     <header class="header">
       <div class="l-wrapper">
         <div class="header__inside clearfix">
@@ -25,9 +25,9 @@
           <div id="header__menu-js" class="header__menu">
             <input type="checkbox" id="menuicon" />
             <label for="menuicon">
-              <span></span>
-              <span></span>
-              <span></span>
+              <span class="menu-dark"></span>
+              <span class="menu-dark"></span>
+              <span class="menu-dark"></span>
             </label>
           </div>
         </div>
@@ -42,26 +42,27 @@
       >
       <nav class="overlay-menu">
         <ul>
-          <li><a id="overlay__about-js" href="about.html">ABOUT</a></li>
-          <li><a id="overlay__photo-js" href="#">PHOTO</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="photo.html">PHOTO</a></li>
         </ul>
       </nav>
     </aside>
-    <main>
-      <section class="group">
-        <div class="l-wrapper">
-          <div id="lightgallery" class="grid clearfix">
-            <a data-fancybox="gallery" href="../images/suo1.jpeg"
-              ><img src="../images/suo1.jpeg"
-            /></a>
-            <a data-fancybox="gallery" href="../images/suo2.jpeg"
-              ><img src="../images/suo2.jpeg"
-            /></a>
+    <main class="main__photo">
+      <div class="title">
+        <h2>Photos</h2>
+      </div>
+      <section class="photo">
+        <div class="grid clearfix">
+          <div class="grid-sizer"></div>
+          <div class="gutter-sizer"></div>
+          <div class="grid-item">
+            <a></a>
           </div>
         </div>
       </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/masonry.pkgd.min.js"></script>
     <script src="../js/jquery.fancybox.min.js"></script>
     <script src="../static/main.js"></script>
   </body>
