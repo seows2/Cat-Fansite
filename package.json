@@ -40,5 +40,8 @@
   "bugs": {
     "url": "https://github.com/seows2/Cat-Fansite/issues"
   },
-  "homepage": "https://github.com/seows2/Cat-Fansite#readme"
+  "homepage": "https://github.com/seows2/Cat-Fansite#readme",
+  "browserslist": [
+    "defaults"
+  ]
 }

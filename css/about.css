@@ -50,10 +50,10 @@ section:last-child {
 
 .member__img {
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   width: 60%;
-  padding-top: 60%;
+  padding-top: 50%;
   float: left;
   border: 10px solid white;
 }
