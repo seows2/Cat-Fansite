@@ -15,5 +15,6 @@ const initalizeMasonry = () => {
     gutter: CLASS.GUTTER_SIZER,
   });
 };
-
-initalizeMasonry();
+if (document.querySelector(".photo_html")) {
+  initalizeMasonry();
+}

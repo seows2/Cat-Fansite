@@ -1,5 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const Dotenv = require("dotenv-webpack");
 
 const MODE = process.env.WEBPACK_ENV;
 const ENTRY_FILE = path.resolve(__dirname, "js", "main.js");
@@ -50,7 +51,7 @@ const config = {
     path: OUTPUT_DIR,
     filename: "[name].js",
   },
-  plugins: [new MiniCssExtractPlugin({ filename: "main.css" })],
+  plugins: [new MiniCssExtractPlugin({ filename: "main.css" }), new Dotenv()],
 };
 
 module.exports = config;

@@ -3742,12 +3742,6 @@
           "error",
           "https://github.com/alvarotrigo/fullPage.js#options."
         );
-      } else if (l && l.length < 20) {
-        console.warn(
-          "%c This website was made using fullPage.js slider. More info on the following website:",
-          msgStyle
-        );
-        console.warn("%c https://alvarotrigo.com/fullPage/", msgStyle);
       }
 
       if (hasClass($html, ENABLED)) {

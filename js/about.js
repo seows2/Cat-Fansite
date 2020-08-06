@@ -22,6 +22,7 @@ const initializeScrollEffect = function () {
 
 const initializeFullpageEffect = function () {
   new fullpage("#fullpage-js", {
+    licenseKey: process.env.licenseKey,
     autoScrolling: true,
     responsiveWidth: 768,
   });
@@ -29,6 +30,8 @@ const initializeFullpageEffect = function () {
 };
 
 window.onload = () => {
-  initializeScrollEffect();
-  initializeFullpageEffect();
+  if (document.querySelector(".about")) {
+    initializeScrollEffect();
+    initializeFullpageEffect();
+  }
 };
