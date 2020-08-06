@@ -16,6 +16,4 @@ const initalizeMasonry = () => {
   });
 };
 
-const isElementInViewport = (element) => {};
-
 initalizeMasonry();
