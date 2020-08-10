@@ -22,10 +22,3 @@
   float: left;
   margin-bottom: 1rem;
 }
-
-@media (max-width: 768px) {
-  .grid-sizer,
-  .grid-item {
-    width: 100%;
-  }
-}

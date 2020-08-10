@@ -11,12 +11,16 @@
       href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap"
+      rel="stylesheet"
+    />
     <link href="../css/jquery.fancybox.min.css" rel="stylesheet" />
     <link href="../static/main.css" rel="stylesheet" />
     <title>고양이 팬사이트</title>
   </head>
   <body class="about">
-    <header id="header" class="header">
+    <header id="header-js" class="header">
       <div class="header__inside clearfix">
         <a class="header__logo" href="index.html">
           <span>고양이</span>
@@ -45,555 +49,135 @@
         </ul>
       </nav>
     </aside>
-    <main id="fullpage-js" class="main__about">
-      <section id="catpage" class="group hidden section" data-theme="light">
-        <div class="l-wrapper">
-          <div class="group">
-            <div class="group__inside fadeIn">
-              <img class="group__img" src="../images/cover.jpeg" alt="그룹" />
-              <blockquote>
-                고양이 팬페이지 테스트에요 고양이 팬페이지 테스트에요 고양이
-                팬페이지 테스트에요 고양이 팬페이지 테스트에요 고양이 팬페이지
-                테스트에요
-              </blockquote>
-            </div>
+    <main class="main_about">
+      <section id="members" class="group">
+        <div id="group__inside-js">
+          <div class="group__member group__member--active">
+            <h2>스오</h2>
+          </div>
+          <div class="group__member group__member--active">
+            <h2>지존</h2>
+          </div>
+          <div class="group__member group__member--active">
+            <h2>막내</h2>
+          </div>
+          <div class="group__member group__member--active">
+            <h2>퉁퉁</h2>
+          </div>
+          <div class="group__member group__member--active">
+            <h2>하양</h2>
           </div>
         </div>
       </section>
-      <section
-        id="zizon"
-        class="hidden section"
-        data-color="#FACBC8"
-        data-theme="light"
-      >
-        <div class="l-wrapper">
-          <div class="member">
-            <div class="member__inside">
-              <div class="member__profile clearfix">
-                <div class="member__img zizon-img"></div>
-                <div class="member__detail font-main-dark">
-                  <h2>지존 <span>쫀쪼니</span></h2>
-                  <h3 class="font-sub-dark">젖소, 바보</h3>
-                  <p class="member__detail__spec">
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                  </p>
-                  <p class="member__detail__saying">
-                    "지존이는 정말 귀엽다는 내용이 길게 써져있습니다. 정말
-                    기이이이이이이이이이이이이이이이이이이이이이이이이이이이
-                    이이이이이이이이이이이이이이이이이이이이이이이이일게요"
-                  </p>
-                </div>
-              </div>
-              <div id="lightgallery" class="member__photos">
-                <div class="l-wrapper">
-                  <ul class="l-row">
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_zizon"
-                          href="../images/zizon.jpeg"
-                          ><img
-                            class="photo"
-                            src="../images/zizon.jpeg"
-                            alt="지존1"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_zizon"
-                          href="../images/zizon.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/zizon.jpeg"
-                            alt="지존2"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_zizon"
-                          href="../images/zizon.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/zizon.jpeg"
-                            alt="지존3"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_zizon"
-                          href="../images/zizon.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/zizon.jpeg"
-                            alt="지존4"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_zizon"
-                          href="../images/zizon.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/zizon.jpeg"
-                            alt="지존5"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+      <section id="suo" class="single">
+        <div class="single__inside">
+          <div class="single__profile">
+            <div class="single__profile__img single__profile__suo"></div>
+          </div>
+          <div class="single__detail">
+            <p class="single__detail__spec">
+              <span class="line1">고양이 정보. 고양이</span>
+              <span class="line2">고양이 정보. 고양이</span>
+              <span class="line3">고양이 정보. 고양이</span>
+              <span class="line4">고양이 정보. 고양이</span>
+              <span class="line5">고양이 정보. 고양이</span>
+            </p>
+            <p class="single__detail__saying">
+              "고양이에 대한 설명이 길게 고양이에 대한 설명이 길게 고양이에 대한
+              설명이 길게 고양이에 대한 설명이 길게 고양이에 대한 설명이 길게
+              고양이에 대한 설명이 길게 "
+            </p>
           </div>
         </div>
       </section>
-      <section
-        id="ha"
-        class="hidden section"
-        data-color="#261338"
-        data-theme="dark"
-      >
-        <div class="l-wrapper">
-          <div class="member">
-            <div class="member__inside">
-              <div class="member__profile clearfix">
-                <div class="member__img ha-img"></div>
-                <div class="member__detail font-main-dark">
-                  <h2>술떡 <span>수떡수떡</span></h2>
-                  <h3 class="font-sub-dark">고등어, 귀여움</h3>
-                  <p class="member__detail__spec">
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                  </p>
-                  <p class="member__detail__saying">
-                    "하양이는 정말 귀엽다는 내용이 길게 써져있습니다. 정말
-                    기이이이이이이이이이이이이이이이이이이이이이이이이이이이
-                    이이이이이이이이이이이이이이이이이이이이이이이이일게요"
-                  </p>
-                </div>
-              </div>
-              <div class="member__photos">
-                <div class="l-wrapper">
-                  <ul class="l-row">
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a data-fancybox="gallery_ha" href="../images/ha.jpg">
-                          <img class="photo" src="../images/ha.jpg" alt="하양1"
-                        /></a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a data-fancybox="gallery_ha" href="../images/ha.jpg">
-                          <img
-                            class="photo"
-                            src="../images/ha.jpg"
-                            alt="하양2"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a data-fancybox="gallery_ha" href="../images/ha.jpg">
-                          <img
-                            class="photo"
-                            src="../images/ha.jpg"
-                            alt="하양3"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a data-fancybox="gallery_ha" href="../images/ha.jpg">
-                          <img
-                            class="photo"
-                            src="../images/ha.jpg"
-                            alt="하양4"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a data-fancybox="gallery_ha" href="../images/ha.jpg">
-                          <img
-                            class="photo"
-                            src="../images/ha.jpg"
-                            alt="하양5"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+      <section id="zizon" class="single">
+        <div class="single__inside">
+          <div class="single__profile">
+            <div class="single__profile__img single__profile__zizon"></div>
+          </div>
+          <div class="single__detail">
+            <p class="single__detail__spec">
+              <span class="line1">고양이 정보. 고양이</span>
+              <span class="line2">고양이 정보. 고양이</span>
+              <span class="line3">고양이 정보. 고양이</span>
+              <span class="line4">고양이 정보. 고양이</span>
+              <span class="line5">고양이 정보. 고양이</span>
+            </p>
+            <p class="single__detail__saying">
+              "고양이에 대한 설명이 길게 고양이에 대한 설명이 길게 고양이에 대한
+              설명이 길게 고양이에 대한 설명이 길게 고양이에 대한 설명이 길게
+              고양이에 대한 설명이 길게 "
+            </p>
           </div>
         </div>
       </section>
-      <section id="mak" class="hidden section">
-        <div class="l-wrapper">
-          <div class="member">
-            <div class="member__inside">
-              <div class="member__profile clearfix">
-                <div class="member__img mak-img"></div>
-                <div class="member__detail font-main-dark">
-                  <h2>투슬리스 <span>뚜슬투슬</span></h2>
-                  <h3 class="font-sub-dark">고등어, 바보</h3>
-                  <p class="member__detail__spec">
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                  </p>
-                  <p class="member__detail__saying">
-                    "막내는 정말 귀엽다는 내용이 길게 써져있습니다. 정말
-                    기이이이이이이이이이이이이이이이이이이이이이이이이이이이
-                    이이이이이이이이이이이이이이이이이이이이이이이이일게요"
-                  </p>
-                </div>
-              </div>
-              <div class="member__photos">
-                <div class="l-wrapper">
-                  <ul class="l-row">
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_mak"
-                          href="../images/mak.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/mak.jpeg"
-                            alt="막내1"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_mak"
-                          href="../images/mak.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/mak.jpeg"
-                            alt="막내2"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_mak"
-                          href="../images/mak.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/mak.jpeg"
-                            alt="막내3"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_mak"
-                          href="../images/mak.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/mak.jpeg"
-                            alt="막내4"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_mak"
-                          href="../images/mak.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/mak.jpeg"
-                            alt="막내5"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+      <section id="mak" class="single">
+        <div class="single__inside">
+          <div class="single__profile">
+            <div class="single__profile__img single__profile__mak"></div>
+          </div>
+          <div class="single__detail">
+            <p class="single__detail__spec">
+              <span class="line1">고양이 정보. 고양이</span>
+              <span class="line2">고양이 정보. 고양이</span>
+              <span class="line3">고양이 정보. 고양이</span>
+              <span class="line4">고양이 정보. 고양이</span>
+              <span class="line5">고양이 정보. 고양이</span>
+            </p>
+            <p class="single__detail__saying">
+              "고양이에 대한 설명이 길게 고양이에 대한 설명이 길게 고양이에 대한
+              설명이 길게 고양이에 대한 설명이 길게 고양이에 대한 설명이 길게
+              고양이에 대한 설명이 길게 "
+            </p>
           </div>
         </div>
       </section>
-      <section id="suo" class="hidden section">
-        <div class="l-wrapper">
-          <div class="member">
-            <div class="member__inside">
-              <div class="member__profile clearfix">
-                <div class="member__img suo-img"></div>
-                <div class="member__detail font-main-dark">
-                  <h2>스오 <span>또또</span></h2>
-                  <h3 class="font-sub-dark">고등어, 장녀</h3>
-                  <p class="member__detail__spec">
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                  </p>
-                  <p class="member__detail__saying">
-                    "스오는 정말 귀엽다는 내용이 길게 써져있습니다. 정말
-                    기이이이이이이이이이이이이이이이이이이이이이이이이이이이
-                    이이이이이이이이이이이이이이이이이이이이이이이이일게요"
-                  </p>
-                </div>
-              </div>
-              <div id="lightgallery" class="member__photos">
-                <div class="l-wrapper">
-                  <ul class="l-row">
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_suo"
-                          href="../images/suo1.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/suo1.jpeg"
-                            alt="스오1"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_suo"
-                          href="../images/suo2.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/suo2.jpeg"
-                            alt="스오2"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_suo"
-                          href="../images/suo3.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/suo3.jpeg"
-                            alt="스오3"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_suo"
-                          href="../images/suo4.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/suo4.jpeg"
-                            alt="스오4"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_suo"
-                          href="../images/suo5.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/suo5.jpeg"
-                            alt="스오5"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+      <section id="tung" class="single">
+        <div class="single__inside">
+          <div class="single__profile">
+            <div class="single__profile__img single__profile__tung"></div>
+          </div>
+          <div class="single__detail">
+            <p class="single__detail__spec">
+              <span class="line1">고양이 정보. 고양이</span>
+              <span class="line2">고양이 정보. 고양이</span>
+              <span class="line3">고양이 정보. 고양이</span>
+              <span class="line4">고양이 정보. 고양이</span>
+              <span class="line5">고양이 정보. 고양이</span>
+            </p>
+            <p class="single__detail__saying">
+              "고양이에 대한 설명이 길게 고양이에 대한 설명이 길게 고양이에 대한
+              설명이 길게 고양이에 대한 설명이 길게 고양이에 대한 설명이 길게
+              고양이에 대한 설명이 길게 "
+            </p>
           </div>
         </div>
       </section>
-      <section id="tung" class="hidden section">
-        <div class="l-wrapper">
-          <div class="member">
-            <div class="member__inside">
-              <div class="member__profile clearfix">
-                <div class="member__img tung-img"></div>
-                <div class="member__detail font-main-dark">
-                  <h2>퉁퉁 <span>룽룽</span></h2>
-                  <h3 class="font-sub-dark">고등어, 순둥이</h3>
-                  <p class="member__detail__spec">
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                    고양이 정보 <span class="font-contents-dark">고양이</span
-                    ><br />
-                  </p>
-                  <p class="member__detail__saying">
-                    "퉁퉁이는 정말 귀엽다는 내용이 길게 써져있습니다. 정말
-                    기이이이이이이이이이이이이이이이이이이이이이이이이이이이
-                    이이이이이이이이이이이이이이이이이이이이이이이이일게요"
-                  </p>
-                </div>
-              </div>
-              <div class="member__photos">
-                <div class="l-wrapper">
-                  <ul class="l-row">
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_tung"
-                          href="../images/tung.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/tung.jpeg"
-                            alt="퉁퉁1"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_tung"
-                          href="../images/tung.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/tung.jpeg"
-                            alt="퉁퉁2"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_tung"
-                          href="../images/tung.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/tung.jpeg"
-                            alt="퉁퉁3"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_tung"
-                          href="../images/tung.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/tung.jpeg"
-                            alt="퉁퉁4"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                    <li class="l-col l-col-1-5 l-col-t-6-12">
-                      <div class="photo-wrapper">
-                        <a
-                          data-fancybox="gallery_tung"
-                          href="../images/tung.jpeg"
-                        >
-                          <img
-                            class="photo"
-                            src="../images/tung.jpeg"
-                            alt="퉁퉁5"
-                          />
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+      <section id="ha" class="single">
+        <div class="single__inside">
+          <div class="single__profile">
+            <div class="single__profile__img single__profile__ha"></div>
+          </div>
+          <div class="single__detail">
+            <p class="single__detail__spec">
+              <span class="line1">고양이 정보. 고양이</span>
+              <span class="line2">고양이 정보. 고양이</span>
+              <span class="line3">고양이 정보. 고양이</span>
+              <span class="line4">고양이 정보. 고양이</span>
+              <span class="line5">고양이 정보. 고양이</span>
+            </p>
+            <p class="single__detail__saying">
+              "고양이에 대한 설명이 길게 고양이에 대한 설명이 길게 고양이에 대한
+              설명이 길게 고양이에 대한 설명이 길게 고양이에 대한 설명이 길게
+              고양이에 대한 설명이 길게 "
+            </p>
           </div>
         </div>
       </section>
+      <div id="backBtn-js" class="backBtn">
+        <img src="../images/backBtn.svg" alt="뒤로가기" />
+      </div>
     </main>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="../js/jquery.fancybox.min.js"></script>
-    <script src="../js/fullpage.js"></script>
     <script src="../static/main.js"></script>
   </body>
 </html>
