@@ -2,9 +2,15 @@
   margin-top: 10vh;
 }
 
+.section_photo {
+  position: absolute;
+  width: 80vw;
+  left: 10vw;
+}
+
 .title {
   text-align: center;
-  padding: 3rem 0;
+  padding: 7rem 0;
 }
 
 .title h2 {
