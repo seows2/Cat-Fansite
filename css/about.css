@@ -230,6 +230,23 @@
   }
 }
 
+@keyframes appearFromRight {
+  from {
+    margin-left: 100vw;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes appearFromLeft {
+  from {
+    margin-left: -100vw;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
 @keyframes fadeInFromBottom {
   from {
     opacity: 0;
@@ -263,5 +280,85 @@
   }
   to {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about_html {
+    font-size: 70%;
+  }
+  .header {
+    position: static;
+    height: 10vh;
+    background-color: white;
+  }
+  .group {
+    height: 90vh;
+    position: absolute;
+  }
+  .group__member {
+    width: 100vw;
+    min-height: 20%;
+    justify-content: flex-start;
+  }
+  .group__member h2 {
+    margin-left: 4rem;
+  }
+  .group__member:nth-child(1) {
+    top: 0%;
+    left: 0;
+    background-position: 0% 28%;
+    animation-name: appearFromLeft;
+  }
+  .group__member:nth-child(2) {
+    top: 20%;
+    left: 0;
+    background-position: 0% 35%;
+    animation-name: appearFromRight;
+  }
+  .group__member:nth-child(3) {
+    top: 40%;
+    left: 0;
+    background-position: 0% 40%;
+    animation-name: appearFromLeft;
+  }
+  .group__member:nth-child(4) {
+    top: 60%;
+    left: 0;
+    animation-name: appearFromRight;
+  }
+  .group__member:nth-child(5) {
+    top: 80%;
+    left: 0;
+    background-position: 0% 30%;
+    animation-name: appearFromLeft;
+  }
+  .group__member.group__member--expand {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .single {
+    height: auto;
+  }
+  .single__inside {
+    flex-direction: column;
+    width: 100%;
+    position: static;
+    transform: none;
+    align-items: center;
+    padding-top: 10rem;
+  }
+  .single__profile,
+  .single__detail {
+    width: 30rem;
+  }
+  .single__profile {
+    margin-left: 10rem;
+    flex-basis: 0px;
+  }
+  .single__detail {
+    padding-top: 10rem;
   }
 }
