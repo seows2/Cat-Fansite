@@ -22,8 +22,8 @@
 .group__member h2 {
   color: white;
   margin-bottom: 6rem;
-  font-size: 4rem;
-  font-family: "Jua", serif;
+  font-size: 4vw;
+  font-family: "Fascinate", serif;
   transition: font-size 0.5s;
   animation-name: fadeInFromBottom;
   animation-duration: 1s;

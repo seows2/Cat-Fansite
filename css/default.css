@@ -39,7 +39,7 @@ html {
 
 body {
   font-size: 1.4rem;
-  font-family: "Jua", sans-serif;
+  font-family: "MaplestoryOTFBold", "Jua", sans-serif;
 }
 
 h1,
@@ -292,4 +292,12 @@ blockquote:after {
 
 .l-col-1-5 {
   width: 20%;
+}
+
+@font-face {
+  font-family: "MaplestoryOTFBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
