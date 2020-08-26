@@ -141,7 +141,7 @@
   background-position: 63%;
 }
 .single__profile__zizon {
-  background-image: url("../images/zizon.jpeg");
+  background-image: url("../images/zizon_about.jpeg");
 }
 .single__profile__tung {
   background-image: url("../images/tung.jpeg");
@@ -179,7 +179,7 @@
   animation-name: fadeInFromBottom;
   animation-duration: 1s;
   animation-fill-mode: both;
-  display: inline-block;
+  display: block;
 }
 .single__detail__spec .line1 {
   animation-delay: 0.3s;
