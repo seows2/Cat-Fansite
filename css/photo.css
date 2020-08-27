@@ -1,5 +1,5 @@
 .main__photo {
-  margin-top: 10vh;
+  margin-top: 7vh;
 }
 
 .section_photo {
@@ -27,4 +27,31 @@
 .grid-item {
   float: left;
   margin-bottom: 1rem;
+}
+
+.placeholder {
+  transform: scale(0);
+}
+
+.placeholder--scale {
+  animation: show 0.5s both ease-in-out;
+}
+
+@keyframes show {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+@media (max-width: 768px) {
+  .main__photo {
+    margin-top: 0;
+  }
+  .grid__sizer,
+  .grid__item {
+    width: 100%;
+  }
 }
