@@ -1,5 +1,5 @@
 .about {
-  background-color: #080305;
+  background-color: white;
 }
 .group__member {
   position: absolute;
@@ -142,6 +142,9 @@
 .single__main__profile {
   position: relative;
 }
+.single__main__img {
+  max-height: 80vh;
+}
 
 .single__main__profile::after {
   content: " ";
@@ -149,9 +152,36 @@
   position: absolute;
   left: 5%;
   top: 5%;
-  width: 100%;
+  width: 70%;
   height: 100%;
-  border: 5px solid #2ebce2;
+  border: 5px solid #a5c5e1;
+}
+
+.single__photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.placeholder {
+  width: 35vw;
+  margin-left: 10rem;
+  align-self: flex-start;
+  transform: translateX(20%);
+  opacity: 0;
+  border-radius: 1rem;
+}
+.placeholder:nth-child(even) {
+  margin-right: 10rem;
+  margin-top: -10rem;
+  align-self: flex-end;
+}
+
+.placeholder.intersect:nth-child(odd) {
+  animation: showPhotoFromRight 1s both 0.5s;
+}
+.placeholder.intersect:nth-child(even) {
+  animation: showPhotoFromLeft 1s both 0.5s;
 }
 /*추가된 것 여기까지*/
 
@@ -330,6 +360,29 @@
   }
   to {
     width: 100%;
+  }
+}
+@keyframes showPhotoFromRight {
+  from {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showPhotoFromLeft {
+  from {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
