@@ -352,7 +352,7 @@
     position: relative;
     height: 90vh;
   }
-  .header {
+  .header__about {
     position: static;
     height: 10vh;
     background-color: white;
@@ -402,5 +402,51 @@
     top: 0;
     width: 100vw;
     height: 100vh;
+  }
+  .single__contents {
+    height: auto;
+  }
+  .single__main,
+  .single__main__title,
+  .single__detail__spec,
+  .single__detail__saying {
+    position: static;
+  }
+  .single__main,
+  .single__detail__spec,
+  .single__detail__saying {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .single__main__title {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+  .single__main__title span {
+    font-size: 2.5rem;
+  }
+  .single__detail__spec {
+    font-size: 2rem;
+    margin: 3rem auto;
+  }
+  .single__detail__saying {
+    font-size: 1.5rem;
+  }
+  .single__detail__saying,
+  .single__detail__spec {
+    line-height: 1.5;
+  }
+  .backBtn {
+    font-size: 5rem;
+    top: 1%;
+  }
+  .placeholder {
+    width: 80vw;
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+  .placeholder:nth-child(even) {
+    margin-right: 0;
+    margin-top: 0;
   }
 }

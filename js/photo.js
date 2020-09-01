@@ -16,7 +16,7 @@ const initalizeMasonry = () => {
   });
 };
 const initObserver = (io) => {
-  const placeholders = document.querySelectorAll(".placeholder");
+  const placeholders = document.querySelectorAll(".placeholderz");
   placeholders.forEach((placeholder) => io.observe(placeholder));
 };
 
