@@ -130,7 +130,7 @@
 .single__main__title {
   position: absolute;
   left: -10%;
-  top: -5%;
+  top: -12%;
   color: rgba(0, 0, 0, 0.4);
   font-size: 10rem;
   z-index: 1;
@@ -143,7 +143,8 @@
   position: relative;
 }
 .single__main__img {
-  max-height: 80vh;
+  max-width: 70%;
+  max-height: 85vh;
 }
 
 .single__main__profile::after {
@@ -185,55 +186,6 @@
 }
 /*추가된 것 여기까지*/
 
-.single__inside {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-}
-.single__profile {
-  flex-basis: 60rem;
-  transform: rotate(-5deg) translateX(-10%);
-}
-.single__profile__img {
-  padding-top: 150%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  box-shadow: 0 -1rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
-  margin-right: 4rem;
-  animation: expand 1s ease 0.5s forwards;
-  position: relative;
-}
-.single__profile__suo {
-  background-image: url("../images/suo2.jpeg");
-}
-.single__profile__mak {
-  background-image: url("../images/mak.jpeg");
-  background-position: 63%;
-}
-.single__profile__zizon {
-  background-image: url("../images/zizon_about.jpeg");
-}
-.single__profile__tung {
-  background-image: url("../images/tung.jpeg");
-}
-.single__profile__ha {
-  background-image: url("../images/ha2.jpeg");
-}
-.single__profile__img:before {
-  content: " ";
-  position: absolute;
-  z-index: -6;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  border: 10px solid white;
-  transform: rotate(-5deg) translateX(-10%);
-  animation: expand 1s ease 0.5s forwards;
-}
 .single__detail {
   line-height: 2;
 }
@@ -241,9 +193,8 @@
   position: absolute;
   font-size: 3rem;
   top: 35%;
-  right: 5%;
+  right: 12%;
   color: rgba(0, 0, 0, 0.8);
-  width: 30rem;
 }
 .single__detail__spec span {
   font-weight: bold;
@@ -385,10 +336,21 @@
     opacity: 1;
   }
 }
-
+@keyframes expandMobile {
+  from {
+    height: 20%;
+  }
+  to {
+    height: 110%;
+  }
+}
 @media (max-width: 768px) {
   .about_html {
     font-size: 70%;
+  }
+  .main_about {
+    position: relative;
+    height: 90vh;
   }
   .header {
     position: static;
@@ -440,28 +402,5 @@
     top: 0;
     width: 100vw;
     height: 100vh;
-  }
-
-  .single {
-    height: auto;
-  }
-  .single__inside {
-    flex-direction: column;
-    width: 100%;
-    position: static;
-    transform: none;
-    align-items: center;
-    padding-top: 10rem;
-  }
-  .single__profile,
-  .single__detail {
-    width: 30rem;
-  }
-  .single__profile {
-    margin-left: 10rem;
-    flex-basis: 0px;
-  }
-  .single__detail {
-    padding-top: 10rem;
   }
 }
