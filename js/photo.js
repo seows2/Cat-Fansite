@@ -35,8 +35,8 @@ const initScrollAction = () => {
 };
 
 if (document.querySelector(".photo_html")) {
-  window.onload = () => {
+  window.addEventListener("DOMContentLoaded", () => {
     initalizeMasonry();
     initScrollAction();
-  };
+  });
 }
