@@ -28,12 +28,12 @@ li:nth-child(1) .bg__img {
 }
 
 li:nth-child(2) .bg__img {
-  background-image: url("../images/ha.jpg");
+  background-image: url("../images/ha_index.jpg");
   animation-delay: 6s;
 }
 
 li:nth-child(3) .bg__img {
-  background-image: url("../images/mak.jpeg");
+  background-image: url("../images/mak_index.jpeg");
   animation-delay: 12s;
 }
 
