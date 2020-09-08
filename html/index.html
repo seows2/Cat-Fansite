@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rochester&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../static/main.css" rel="stylesheet" />
+    <title>고양이 팬사이트</title>
+  </head>
+  <body class="index">
+    <header class="header">
+      <div class="header__inside clearfix">
+        <a class="header__logo" href="index.html">
+          <span>고양이</span>
+        </a>
+        <div id="header__menu-js" class="header__menu">
+          <input type="checkbox" id="menuicon" />
+          <label for="menuicon">
+            <span class="menu-dark"></span>
+            <span class="menu-dark"></span>
+            <span class="menu-dark"></span>
+          </label>
+        </div>
+      </div>
+      <h1>홈</h1>
+    </header>
+    <aside id="overlay-js" class="overlay">
+      <a
+        href="javascript:void(0)"
+        id="overlay__closeBtn-js"
+        class="overlay__closeBtn"
+        >&times;</a
+      >
+      <nav class="overlay-menu">
+        <ul>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="photo.html">PHOTO</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="index_main">
+      <section class="contents">
+        <ul class="bg">
+          <li><div class="bg__img"></div></li>
+          <li><div class="bg__img"></div></li>
+          <li><div class="bg__img"></div></li>
+          <li><div class="bg__img"></div></li>
+          <li><div class="bg__img"></div></li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer footer--light footer--float">
+      <ul class="footer__social">
+        <li>
+          <a href="">
+            <span class="footer__social__youtube"></span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="footer__social__instagram"></span>
+          </a>
+        </li>
+      </ul>
+      <p>Copyright 2020. SeoWS All Rights Reserved</p>
+    </footer>
+    <script src="../static/main.js"></script>
+  </body>
+</html>
