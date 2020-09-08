@@ -29,7 +29,7 @@
   },
   "scripts": {
     "watch-dev": "WEBPACK_ENV=development webpack -w",
-    "deploy": "gh-pages -d static"
+    "deploy": "gh-pages -d ."
   },
   "repository": {
     "type": "git",
