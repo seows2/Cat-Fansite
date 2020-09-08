@@ -1,0 +1,191 @@
+.about {
+  transition: background-color 0.5s;
+}
+section {
+  margin-bottom: 10rem;
+}
+
+section:last-child {
+  margin-bottom: 20px;
+}
+
+.group {
+  position: relative;
+  height: 100vh;
+}
+
+.group__inside {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.group__img {
+  width: 40vw;
+  display: block;
+  margin: 0 auto 4rem;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.member {
+  position: relative;
+  height: 100vh;
+}
+
+.member__inside {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.member__profile {
+  margin: 0 auto 2rem;
+  width: 80%;
+}
+
+.member__img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 60%;
+  padding-top: 50%;
+  float: left;
+  border: 10px solid white;
+}
+
+.zizon-img {
+  background-image: url("../images/zizon.jpeg");
+}
+.ha-img {
+  background-image: url("../images/ha.jpg");
+}
+.mak-img {
+  background-image: url("../images/mak.jpeg");
+}
+.suo-img {
+  background-image: url("../images/suo.jpeg");
+}
+.tung-img {
+  background-image: url("../images/tung.jpeg");
+}
+
+.member__detail {
+  overflow: hidden;
+  text-align: left;
+  padding: 2rem;
+}
+
+.member__detail h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.member__detail h2 span {
+  font-size: 1.6rem;
+}
+
+.member__detail h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.member__detail__spec {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.member__detail__saying {
+  font-size: 2rem;
+}
+
+.font-main-dark {
+  color: black;
+}
+.font-main-light {
+  color: white;
+}
+.font-sub-dark {
+  color: crimson;
+}
+.font-sub-light {
+  color: skyblue;
+}
+.font-contents-dark {
+  color: purple;
+}
+.font-contents-light {
+  color: orange;
+}
+
+.photo-wrapper {
+  overflow: hidden;
+}
+
+.photo {
+  filter: grayscale(100%);
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.photo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+.fadeIn {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.8s;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .l-col-t-6-12 {
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+  .group {
+    height: auto;
+  }
+  .group__inside {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+  }
+  .member {
+    height: auto;
+  }
+  .member__inside {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+  }
+  .member__img {
+    float: none;
+    padding-top: 80%;
+    width: 100%;
+  }
+  .member__detail {
+    padding-left: 0;
+  }
+}
