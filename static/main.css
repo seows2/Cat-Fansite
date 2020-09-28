@@ -1179,7 +1179,7 @@ html.fp-enabled,
 
 .carousel {
   position: relative;
-  height: 80vh;
+  height: 90vh;
   top: 50%;
   transform: translateY(-50%);
 }
