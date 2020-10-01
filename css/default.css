@@ -354,3 +354,7 @@ blockquote:after {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Anton";
+  src: url("./anton.woff") format("woff");
+}

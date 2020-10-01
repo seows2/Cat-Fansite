@@ -354,6 +354,10 @@ blockquote:after {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Anton";
+  src: url("./anton.woff") format("woff");
+}
 
 .bg,
 .bg:after {
@@ -1196,7 +1200,7 @@ html.fp-enabled,
 .video__title {
   position: absolute;
   font-size: 10rem;
-  font-family: "Rochester", serif;
+  font-family: "Anton", serif;
   top: 90%;
   left: 50%;
   transform: translateX(-50%);
