@@ -40,9 +40,8 @@ const moveToSelected = (element) => {
   }
 };
 
-if (document.querySelector(".video_html")) {
+const initKeyEvent = () => {
   document.addEventListener("keydown", (e) => {
-    console.log(e.key);
     switch (e.key) {
       case "ArrowLeft":
         moveToSelected("prev");
@@ -54,10 +53,50 @@ if (document.querySelector(".video_html")) {
     }
     e.preventDefault();
   });
+};
+
+const initClickEvent = () => {
+  document.querySelectorAll(".carousel__contents").forEach((content) => {
+    content.addEventListener("click", () => moveToSelected(content));
+  });
+};
+
+const initVideo = () => {
+  document.querySelectorAll(".video__player").forEach((videoElem) => {
+    videoElem.addEventListener("mouseenter", () => {
+      const src = videoElem.getAttribute("src");
+      if (!src.includes("autoplay")) {
+        videoElem.setAttribute("src", `${src}&autoplay=1`);
+      } else {
+        //iframe 통신
+        videoElem.contentWindow.postMessage(
+          '{"event":"command","func":"playVideo","args":""}',
+          "*"
+        );
+      }
+    });
+    videoElem.addEventListener("mouseleave", () => {
+      videoElem.contentWindow.postMessage(
+        '{"event":"command","func":"pauseVideo","args":""}',
+        "*"
+      );
+      window.focus();
+    });
+  });
+};
+
+if (document.querySelector(".video_html")) {
+  const header = document.getElementById("header-js");
+  window.onload = () => {
+    initKeyEvent();
+    initClickEvent();
+    initVideo();
+  };
+  /* 
   document.querySelector(".prev").addEventListener("click", () => {
     moveToSelected("prev");
   });
   document.querySelector(".next").addEventListener("click", () => {
     moveToSelected("next");
-  });
+  }); */
 }

@@ -1,13 +1,6 @@
-.video_main {
-  height: 100vh;
-  position: relative;
-}
-
 .carousel {
   position: relative;
   height: 90vh;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .carousel__contents {
@@ -24,42 +17,35 @@
   position: relative;
   padding-bottom: 50%;
   padding-top: 30px;
-  height: 0;
 }
 
 .video__title {
   position: absolute;
-  font-size: 0;
+  font-size: 10rem;
   font-family: "Rochester", serif;
-  bottom: -10%;
+  top: 90%;
   left: 50%;
   transform: translateX(-50%);
   color: crimson;
   z-index: 3;
   white-space: nowrap;
   opacity: 0;
+  height: 1em;
+}
+
+.video__title::after {
+  content: attr(data-title);
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  transform: translateX(-50%);
+  font-size: 5rem;
+  font-family: "Jua", serif;
+  color: black;
 }
 
 .selected .video__title {
   animation: fadeInTitle 1s forwards;
-}
-
-.video__desc {
-  position: absolute;
-  white-space: nowrap;
-  font-size: 5rem;
-  font-family: "Jua", serif;
-  bottom: -20%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: black;
-  z-index: 3;
-  white-space: nowrap;
-  opacity: 0;
-}
-
-.selected .video__title {
-  animation: fadeInDesc 1s forwards;
 }
 
 .video__cover {
@@ -75,7 +61,7 @@
   transition: opacity 0.5s;
 }
 
-.video:hover .video__cover {
+.selected .video:hover .video__cover {
   opacity: 0;
   z-index: -1;
 }
@@ -125,25 +111,11 @@
 @keyframes fadeInTitle {
   from {
     opacity: 0;
-    bottom: -30%;
-    font-size: 0;
+    top: 110%;
   }
 
   to {
     opacity: 1;
-    bottom: -10%;
-    font-size: 10rem;
-  }
-}
-
-@keyframes fadeInDesc {
-  from {
-    opacity: 0;
-    bottom: -40%;
-  }
-
-  to {
-    opacity: 1;
-    bottom: -20%;
+    top: 90%;
   }
 }
