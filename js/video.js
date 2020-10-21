@@ -86,7 +86,7 @@ const initVideo = () => {
 };
 
 if (document.querySelector(".video_html")) {
-  const header = document.getElementById("header-js");
+  
   window.onload = () => {
     initKeyEvent();
     initClickEvent();
