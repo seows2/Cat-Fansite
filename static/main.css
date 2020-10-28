@@ -1298,5 +1298,36 @@ html.fp-enabled,
   }
 }
 
+@media (max-width: 768px) {
+  .carousel {
+    height: 90vh;
+    overflow: hidden;
+  }
+  .video {
+    width: 90vw;
+  }
+  .video__title {
+    font-size: 4rem;
+  }
+  .video__title::after {
+    display: none;
+  }
+
+  .carousel__contents.prev {
+    left: 50%;
+    transform: translate(-50%, -200%);
+  }
+  .carousel__contents.prev .video {
+    width: 50vw;
+  }
+  .carousel__contents.next {
+    left: 50%;
+    transform: translate(-50%, 100%);
+  }
+  .carousel__contents.next .video {
+    width: 50vw;
+  }
+}
+
 
 
