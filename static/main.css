@@ -31,8 +31,6 @@ img {
   box-sizing: border-box;
 }
 
-/* Typography */
-
 html {
   font-size: 62.5%;
   min-height: 100vh;
@@ -63,12 +61,20 @@ h6 {
 
 .header {
   padding: 1rem 5rem;
+}
+
+.header__float {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
+}
+
+.header__fixed {
+  position: static;
+  height: 10vh;
 }
 
 header h1 {

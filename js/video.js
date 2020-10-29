@@ -85,12 +85,27 @@ const initVideo = () => {
   });
 };
 
+const initHeader = () => {
+  const header = document.getElementById("header-js");
+  const handler = () => {
+    console.log("asdad");
+    if(matchMedia("(max-width: 768px)").matches){
+      header.classList.replace("header__float", "header__fixed")
+    }else {
+      header.classList.replace("header__fixed", "header__float")
+    }
+  }
+  window.addEventListener("resize", handler)
+  handler()
+}
+
 if (document.querySelector(".video_html")) {
   
   window.onload = () => {
     initKeyEvent();
     initClickEvent();
     initVideo();
+    initHeader();
   };
   /* 
   document.querySelector(".prev").addEventListener("click", () => {
