@@ -88,7 +88,6 @@ const initVideo = () => {
 const initHeader = () => {
   const header = document.getElementById("header-js");
   const handler = () => {
-    console.log("asdad");
     if(matchMedia("(max-width: 768px)").matches){
       header.classList.replace("header__float", "header__fixed")
     }else {

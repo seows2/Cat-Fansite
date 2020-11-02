@@ -34,9 +34,22 @@ const initScrollAction = () => {
   initObserver(io);
 };
 
+/* const initHeader = () => {
+  const header = document.getElementById("header-js");
+  const handler = () => {
+    if(matchMedia("(max-width: 768px)").matches){
+      header.classList.replace("header__float", "header__fixed")
+    }else {
+      header.classList.replace("header__fixed", "header__float")
+    }
+  }
+  window.addEventListener("resize", handler)
+  handler()
+} */
+
 if (document.querySelector(".photo_html")) {
-  window.addEventListener("DOMContentLoaded", () => {
+  window.onload = () =>{
     initalizeMasonry();
     initScrollAction();
-  });
+  };
 }

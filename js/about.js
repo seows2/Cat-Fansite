@@ -92,7 +92,24 @@ const initPhoto = () => {
     });
   });
 };
+
+const initHeader = () => {
+  const header = document.getElementById("header-js");
+  const handler = () => {
+    if(matchMedia("(max-width: 768px)").matches){
+      header.classList.replace("header__float", "header__fixed")
+    }else {
+      header.classList.replace("header__fixed", "header__float")
+    }
+  }
+  window.addEventListener("resize", handler)
+  handler()
+}
+
 if (document.querySelector(".about")) {
-  initializePage();
-  initPhoto();
+  window.onload = () => {
+    initializePage();
+    initPhoto();
+    initHeader();
+  }
 }
