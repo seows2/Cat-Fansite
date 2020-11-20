@@ -1183,15 +1183,13 @@ html.fp-enabled,
 }
 
 .video_main {
-  height: 100vh;
+  height: 90vh;
   position: relative;
 }
 
 .carousel {
   position: relative;
   height: 80vh;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .carousel__contents {
@@ -1206,22 +1204,22 @@ html.fp-enabled,
 .video {
   width: 60vw;
   position: relative;
-  padding-bottom: 50%;
+  padding-bottom: 55%;
   padding-top: 30px;
-  height: 0;
 }
 
 .video__title {
   position: absolute;
   font-size: 10rem;
   font-family: "Anton", serif;
-  bottom: -10%;
+  top: 110%;
   left: 50%;
   transform: translateX(-50%);
   color: crimson;
   z-index: 3;
   white-space: nowrap;
   opacity: 0;
+  height: 1em;
 }
 
 .selected .video__title {
@@ -1307,24 +1305,24 @@ html.fp-enabled,
 @keyframes fadeInTitle {
   from {
     opacity: 0;
-    top: 110%;
+    top: 130%;
   }
 
   to {
     opacity: 1;
-    top: 90%;
+    top: 105%;
   }
 }
 
 @keyframes fadeInDesc {
   from {
     opacity: 0;
-    bottom: -40%;
+    top: 150%;
   }
 
   to {
     opacity: 1;
-    bottom: -20%;
+    top: 135%;
   }
 }
 
