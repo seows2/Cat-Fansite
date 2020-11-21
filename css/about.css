@@ -370,7 +370,7 @@
     margin-left: 4rem;
   }
   .group__member:nth-child(1) {
-    top: 0%;
+    top: 0vh;
     left: 0;
     background-position: 0% 28%;
     animation-name: appearFromLeft;
@@ -402,6 +402,7 @@
     top: 0;
     width: 100vw;
     height: 100vh;
+    animation: expandMobile 0.5s both;
   }
   .single__contents {
     height: auto;

@@ -45,9 +45,9 @@
 .video__desc {
   position: absolute;
   white-space: nowrap;
-  font-size: 5rem;
+  font-size: 4rem;
   font-family: "Rochester", serif;
-  bottom: -20%;
+  top: 90%;
   left: 50%;
   transform: translateX(-50%);
   color: black;
