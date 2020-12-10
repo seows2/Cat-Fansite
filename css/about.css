@@ -350,7 +350,7 @@
   }
   .main_about {
     position: relative;
-    height: 90vh;
+    height: 100vh;
   }
   .header__about {
     position: static;
@@ -358,12 +358,11 @@
     background-color: white;
   }
   .group {
-    height: 90vh;
+    height: 80vh;
     position: absolute;
   }
   .group__member {
     width: 100vw;
-    height: 100vh;
     min-height: 20%;
     justify-content: flex-start;
   }
