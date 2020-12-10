@@ -1023,15 +1023,16 @@ html.fp-enabled,
   }
   .main_about {
     position: relative;
-    height: 100vh;
+    height: 90vh;
+    overflow: hidden;
   }
   .header__about {
     position: static;
-    height: 10vh;
+    height: 5vh;
     background-color: white;
   }
   .group {
-    height: 80vh;
+    height: 90vh;
     position: absolute;
   }
   .group__member {
