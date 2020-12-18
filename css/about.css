@@ -351,7 +351,6 @@
   .main_about {
     position: relative;
     height: 90vh;
-    overflow: hidden;
   }
   .header__about {
     position: static;
