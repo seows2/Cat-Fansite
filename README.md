@@ -27,19 +27,12 @@
 |:-------:|:-------:|:-------:|:-------:|:-------:|
 |<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" width="200px"> |<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" width="150px"> |<img src="https://cdn.iconscout.com/icon/free/png-256/javascript-2038874-1720087.png" width="200px"> |<img src="https://raw.githubusercontent.com/webpack/media/master/logo/icon-square-big.png" width="180px"> |<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="150px"> |
 
-<br>
-
-## todos
-
-- [ ] 비디오 페이지 다시 만들기 -> 너무 이상한거같아
-- [ ] 메인(인덱스)페이지 메뉴버튼 사진에 맞게 블랙, 화이트 변환하기 -> 메뉴버튼이 잘 안보여
-- [ ] 고양이 관련 사진, 동영상 추가 -> 귀여움을 더 담고싶어!
-- [ ] lazy loading 구현하기 -> 로딩이 너무 느려, photos는 API 이용해서 하긴 했는데 about은 작은 이미지를 선 로딩한 후 다음 풀이미지로 바꾸는????
-- [ ] 고양이 이야기 페이지 추가. -> 고양이를 데려오게된 계기. 왜 우리 집에 5마리가 있게됐는지를 알려주는 페이지를 따로 만들고 싶어. about에다가 더 층을 쌓아올리면 너무 복잡해지고 무거워질 것 같아.
 
 <br>
 
-### HTML/CSS
+### HTML/CSS   
+팬페이지를 만들 때 모든 것을 처음부터 쌓아올리는 것이 쉽지 않았습니다. 빈 페이지를 보면서 한숨을 푹푹 쉬었었죠. 하지만 처음부터 어떻게 만들지를 하나하나 구상해가면서 시작을 하니 결국 페이지가 하나씩 만들어졌습니다.   
+초기 화면에 고양이들이 번갈아가며 나오는 트랜지션 효과를 만드는데 많은 애를 먹었지만 결국 이쁘게 나온 것 같아서 행복합니다.
 
 ### JS
 
